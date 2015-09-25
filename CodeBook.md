@@ -1,18 +1,22 @@
 Code Book 
 
 X_train
+
 	measurements for the 561 features of training. It contains 561 columns, each column 
 	corresponds to each separate feature.It contains 7352 rows. Details of each feature 
 	can be found in the "features.txt" file. 
 Y_train
+
 	activities of training. It also contains 7352 rows. Six activities in total: 
 	WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
 	see "activity_labels.txt"
 X_test
+
 	measurements for the 561 features of test. It contains 561 columns, each column
 	corresponds to each separate feature. It contains 2947 rows. Details of each feature
 	see "feature.txt" file.
 Y_test
+
 	activities of test. It also contains 2947 rows. Six activities in total: 
 	WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
 	see "activity_labels.txt"
@@ -20,6 +24,7 @@ Y_test
 The column names of "Y_test" and "Y_train" are changed to "activities".
 
 labels
+
 	the six labels for 6 different activities while measuring. The column names of 
 	"labels" are changed to "activities" and "names".
 		1. WALKING
@@ -30,22 +35,28 @@ labels
 		6. LAYING
 		
 Bind_test
+
 	column bind of "X_test" and "Y_test"
 Bind_train
+
 	column bind of "X_train" and "Y_train"
 Mergedata
+
 	row bind of "Bind_test" and "Bind_train". The Mergedata has 10299 rows, and 562 
 	columns, the 1-561 columns correspond to those 561 features, the 562th column has a 
 	column name of "activities", it is for the six different activities numbers.
 	
 Act
+
 	subset the column from "Mergedata" named "activities".
 index
+
 	the row number from the data frame "labels", where the ith value in "Act" equals to 
 	that activity number in "labels". By using the for loop, all the activity numbers
 	in the 562th column of "Mergedata" are converted to corresponding activity names.
 	
 MergeExtract
+
 	Extract only the features of mean and standard deviations from those 561 features. 
 	The "activities" column was put forward as the first column.
 	Shown below are the selected columns of measurements on means and standard deviations
@@ -98,26 +109,34 @@ MergeExtract
  560."angle(Y,gravityMean)"                561."angle(Z,gravityMean)"  
  
  features
+
  	the feature names for those 561 features. 
  featuresExtract
+ 
  	extract only the select 87 feature names as above-mentioned. 
  	
  Subject_test
+ 
  	numbers that represent different subjects involved in the test. It contains 2947 
  	rows.
  Subject_train
+ 
  	numbers that represent different subjects involve in the training. It contains 7352
  	rows.
  Subject_info
+ 
  	combine the Subject_test and Subject train together. It has 10299 rows.
  Data
+ 
  	column bind the "Subject_info" and "MergeExtract". Now the first column is named 
  	"subjects", the number 1-30 represent 30 diffrent subjects involved in the measuring.
  	The 2nd column is named "activities", representing the 6 different activities. The 
  	rest 87 columns are for the features corresponding to mean and std.
  	
  ALL_activities
+ 
  	names of the 87 selected features.
  Tidy
+ 
  	The final independent dataset with the average of each variable for each activity 
  	and each subject.
