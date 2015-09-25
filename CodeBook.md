@@ -62,6 +62,7 @@ MergeExtract
 	Shown below are the selected columns of measurements on means and standard deviations
 	based on my criterion, any feature names from those 561 features that contain either
 	"mean" or "std" are selected. 87 feature names were picked up here.
+
 	
  562."activities"                            1."tBodyAcc-mean()-X"                
   2. "tBodyAcc-mean()-Y"                     3."tBodyAcc-mean()-Z"                   
@@ -108,35 +109,36 @@ MergeExtract
  558."angle(tBodyGyroJerkMean,gravityMean)"559."angle(X,gravityMean)"                
  560."angle(Y,gravityMean)"                561."angle(Z,gravityMean)"  
  
- features
+
+features
 
  	the feature names for those 561 features. 
- featuresExtract
+featuresExtract
  
  	extract only the select 87 feature names as above-mentioned. 
  	
- Subject_test
+Subject_test
  
  	numbers that represent different subjects involved in the test. It contains 2947 
  	rows.
- Subject_train
+Subject_train
  
  	numbers that represent different subjects involve in the training. It contains 7352
  	rows.
- Subject_info
+Subject_info
  
  	combine the Subject_test and Subject train together. It has 10299 rows.
- Data
+Data
  
  	column bind the "Subject_info" and "MergeExtract". Now the first column is named 
  	"subjects", the number 1-30 represent 30 diffrent subjects involved in the measuring.
  	The 2nd column is named "activities", representing the 6 different activities. The 
  	rest 87 columns are for the features corresponding to mean and std.
  	
- ALL_activities
+ALL_activities
  
  	names of the 87 selected features.
- Tidy
+Tidy
  
  	The final independent dataset with the average of each variable for each activity 
  	and each subject.
