@@ -64,8 +64,8 @@ MergeExtract
 	"mean" or "std" are selected. 87 feature names were picked up here.
 
 	
- 562."activities"                            1."tBodyAcc-mean()-X"                
-  2. "tBodyAcc-mean()-Y"                     3."tBodyAcc-mean()-Z"                   
+562."activities"                            1."tBodyAcc-mean()-X"                
+     2. "tBodyAcc-mean()-Y"                     3."tBodyAcc-mean()-Z"                   
   4."tBodyAcc-std()-X"                       5."tBodyAcc-std()-Y"                    
   6."tBodyAcc-std()-Z"                      41."tGravityAcc-mean()-X"                
  42."tGravityAcc-mean()-Y"                  43."tGravityAcc-mean()-Z"                
